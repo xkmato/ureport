@@ -20,7 +20,7 @@
 
               .global-welcome-text
                 -blocktrans
-                  U-Report is a social messaging tool allowing anyone from any community, anywhere in the world to respond to polls, report issues, support child rights and work as positive agents of change on behalf of people in their country.
+                  Ballot Uganda is a community that with a major aim about sensitizing the Ugandan public on election of 2016.
               -if latest_poll
                 .hero-dark-content
                   .hero-title.primary-bg-color
@@ -34,7 +34,7 @@
             .col-sm-5
               .index-global-counter.card.card-padding
                 .hr-header.primary-color
-                  -trans "All U-Report members"
+                  -trans "All Community members"
                 .global-count
                   {{ global_counter|intcomma }}
 
@@ -133,20 +133,20 @@
   -if not org|config:"is_global"
     .section
       %h1.level-1-title
-        - trans "U-REPORTERS IN"
         {{ org.name|upper }}
+        - trans "COMMUNITY"
       .level-1-title-description.secondary-color
       .card.card-padding
         .row
           .col-md-4
             .hr-header.primary-color
-              - trans "TOTAL # OF U-REPORTERS"
+              - trans "TOTAL # OF Community Members"
             .reporters-count
               - with reporters=org|reporter_count
                 - if reporters
                   {{ reporters|intcomma }}
                 - else
-                  000,000
+                  906
 
             - if most_active_regions
               .hr-header.primary-color
@@ -205,7 +205,7 @@
   %hr.aaa
   .section
     %h1.level-1-title
-      - trans "WHAT U-REPORTERS ARE SAYING"
+      - trans "WHAT THE COMMUNITY IS SAYING"
     .level-1-title-description.secondary-color
 
     -if not is_iorg
