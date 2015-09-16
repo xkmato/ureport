@@ -303,9 +303,7 @@
           .navbar-header
             %a#brand.navbar-brand{ href:"/"}
               - block brand
-                {% thumbnail org.logo "230x86" format="PNG" as im %}
-                %img.logo{ src:"{{ im.url }}", alt:"{{ org.name }}"}
-                {% endthumbnail %}
+                %img.logo{ src:"/sitestatic/logo/logo.png", alt:"Ballot Uganda", width:"230", height:"86"}
 
           - block navigation
             %nav#ureport-public-navbar-collapse.collapse.navbar-collapse.navbar-right.public-nav{role:"navigation"}
@@ -330,7 +328,7 @@
 
                 %li.level1{ class:"{% active request 'ureporters' %}"}
                   %a.primary-color{ href:"{% url 'public.ureporters' %}"}
-                    - trans "Community"
+                    - trans "CommunityF"
 
                 - if org|config:"has_jobs"
                   %li.level1{ class:"{% active request 'jobs' %}"}
