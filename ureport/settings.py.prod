@@ -7,15 +7,15 @@ TEMPLATE_DEBUG = DEBUG
 COMPRESS_ENABLED = True
 
 
-EMPTY_SUBDOMAIN_HOST = 'http://ureport.in'
-HOSTNAME = 'ureport.in'
+EMPTY_SUBDOMAIN_HOST = 'http://ballotuganda.com'
+HOSTNAME = 'ballotuganda.com'
 ALLOWED_HOSTS = ['*']
-SESSION_COOKIE_DOMAIN = 'ureport.in'
+SESSION_COOKIE_DOMAIN = 'ballotuganda.com'
 SESSION_COOKIE_SECURE = True
 
 # these guys will get email from sentry
 ADMINS = (
-   ('Nyaruka Ops', 'ops@nyaruka.com'),
+   ('Nyaruka Ops', 'kenneth@sombil.com'),
 )
 
 # set the mail settings, we send through gmail
@@ -28,7 +28,7 @@ EMAIL_USE_TLS = True
 MANAGERS = ADMINS
 
 # add gunicorn
-INSTALLED_APPS = INSTALLED_APPS + ('gunicorn', 'raven.contrib.django.raven_compat',)
+#INSTALLED_APPS = INSTALLED_APPS + ('gunicorn', 'raven.contrib.django.raven_compat',)
 
 # Set your DSN value
 RAVEN_CONFIG = {

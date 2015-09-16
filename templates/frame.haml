@@ -5,7 +5,7 @@
   %meta{ charset:"utf-8"}
   %title
     - block title
-      - trans "U-Report"
+      - trans "Ballot Uganda"
     - block subtitle
       &nbsp;
   %meta{ name:"description", content:""}
@@ -267,7 +267,7 @@
                       %li.divider
                       %li
                         %a{ href:"{% url 'dashblocks.dashblock_list' %}?slug=ureporters"}
-                          - trans "U-Reporters Content"
+                          - trans "Community Content"
 
                       %li.divider
                       %li
@@ -330,7 +330,7 @@
 
                 %li.level1{ class:"{% active request 'ureporters' %}"}
                   %a.primary-color{ href:"{% url 'public.ureporters' %}"}
-                    - trans "U-Reporters"
+                    - trans "Community"
 
                 - if org|config:"has_jobs"
                   %li.level1{ class:"{% active request 'jobs' %}"}
@@ -392,7 +392,7 @@
             -else
               .col-sm-6
                 .terms-privacy
-                  %img.footer-logo{ src:"{{ STATIC_URL }}img/footer.png" }
+                  %img.footer-logo{ src:"{{ STATIC_URL }}img/foooter.png" }
 
             .{class:'{% if org|config:"is_global" %}col-sm-3{% else %}col-sm-6{% endif %}'}
               .follow-us
@@ -413,9 +413,6 @@
                   - if org|config:"youtube_channel_url"
                     %a{href:'{{ org|config:"youtube_channel_url" }}'}
                       %img.footer-social{ src:"{{ STATIC_URL }}img/youtube_footer_icon.png" }
-              -if org|config:"is_global"
-                .footer-global-ureport-logo
-                  %img.footer-logo{ src:"{{ STATIC_URL }}img/footer.png" }
 
           - if not request.user.is_authenticated and not is_iorg and show_login
             .row
