@@ -131,10 +131,10 @@ initMap = (id, geojson, question, districtLabel) ->
 
     # load our actual data
     if not boundary
-      segment = {location:"State"}
+      segment = {location:"state"}
       overallResults = countryResults
     else
-      segment = {location:"District", parent:boundaryId}
+      segment = {location:"district", parent:boundaryId}
       overallResults = boundaryResults[boundaryId]
 
     $.ajax({url:'/pollquestion/' + question + '/results/?segment=' + encodeURIComponent(JSON.stringify(segment)), dataType: "json"}).done (data) ->
