@@ -13,10 +13,10 @@
             .col-md-7
               .hero-dark-content
                 .hero-title.primary-bg-color
-                  - trans "U-REPORTERS IN"
                   {{org.name|upper}}
+                  - trans "COMMUNITY"
                 .hero-description
-                  {{ d_block.summary|safe }}
+                  - trans "Welcome to the Ballot Uganda Community. This is where it all starts, this is how you become part of the #VoteNotViolence movement"
                 .hero-info
                   - trans "Scroll to Learn more"
 
@@ -37,7 +37,7 @@
     %hr.aaa
     .section
       %h1.level-1-title
-        - trans "U-REPORTER STATISTICS"
+        - trans "COMMUNITY STATISTICS"
       .level-1-title-description.secondary-color
       .row
         .col-md-7
@@ -87,7 +87,7 @@
             .white-card-container
               .white-card-inner
                 .white-card-title.primary-bg-color
-                  - trans "WHERE ARE U-REPORTERS FROM?"
+                  - trans "WHERE ARE MEMBERSFROM?"
                 .white-card-content.white-card-padding
                   .ureport-location-map{data-contact-field:'{{org|config:"gender_label"}}', id: "ureport-location-map-id"}
                     #ureport-location-map-id-placeholder.loading-placeholder
@@ -98,7 +98,7 @@
             .white-card-container
               .white-card-inner
                 .white-card-title.primary-bg-color
-                  - trans "REGISTRATION RATE: IN THE PAST 6 MONTHS"
+                  - trans "REGISTRATION RATE: IN THE PAST 6 WEEKS"
                 .white-card-content.white-card-padding
                   .contact-field-graph-registration{ data-contact-field:'{{org|config:"registration_label"}}', id: "graph-contact-field-registration"}
                     #graph-contact-field-registration-placeholder.loading-placeholder
