@@ -79,7 +79,7 @@ class Poll(SmartModel):
     def fetch_poll_results(self):
         for question in self.questions.all():
             question.fetch_results()
-            question.fetch_results(dict(location='District'))
+            question.fetch_results(dict(location='state'))
 
     @classmethod
     def fetch_poll_results_task(cls, poll):
