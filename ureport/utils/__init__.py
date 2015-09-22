@@ -183,7 +183,7 @@ def organize_categories_data(org, contact_field, api_data):
                     if interval_dict.get(key, None):
                         interval_dict[key] += elt['count']
                     else:
-                        interval_dict['key'] = elt['count']
+                        interval_dict[key] = elt['count']
             except ValueError:
                 pass
 
