@@ -46,7 +46,7 @@
               .white-card-title.primary-bg-color
                 - trans "AGE"
               .white-card-content.white-card-padding
-                -if is_org
+                -if is_iorg
                   -include "public/mobile_age_include.haml"
                 -else
                   .contact-field-graph-age{ data-contact-field:'{{org|config:"born_label"}}', id: "graph-contact-field-age"}
