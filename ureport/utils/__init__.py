@@ -190,7 +190,7 @@ def organize_categories_data(org, contact_field, api_data):
         for obj_key in interval_dict.keys():
             cleaned_categories.append(dict(label=obj_key, count=interval_dict[obj_key] ))
 
-        api_data[0]['categories'] = sorted(cleaned_categories, key=lambda k: int(k['label'].strip('s')[0]))
+        api_data[0]['categories'] = sorted(cleaned_categories, key=lambda k: int(k['label'].strip('s').strip('Over ')))
 
     elif api_data and contact_field.lower() == org.get_config('registration_label').lower():
         six_months_ago = now - timedelta(days=180)
